@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import getHeroeById from './bases/08-imp-exp'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+/* const promesa = new Promise((resolve, reject) =>{
+    setTimeout(() => {
+       /* console.log("2 Segudos después");  */
+        // Tarea 
+        // Importar el
+       /*  const p1 = getHeroeById(2);
+        //console.log(heroe);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        reject(p1);
+       //resolve( p1);
+    }, 2000);
+});
+
+promesa.then( (heroe) =>{
+    console.log('heroe',heroe);
+})
+.catch( err => console.warn(err));  */
+
+const getHeroeByIdAsync = (id) =>{
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+           /* console.log("2 Segudos después");  */
+            // Tarea 
+            // Importar el
+            const p1 = getHeroeById(id);
+            //console.log(heroe);
+    
+            reject(p1);
+           //resolve( p1);
+        }, 2000);
+    });
+}
+getHeroeByIdAsync(4)
