@@ -21,6 +21,7 @@ promesa.then( (heroe) =>{
 const getHeroeByIdAsync = (id) =>{
     return new Promise((resolve, reject) =>{
         setTimeout(() => {
+            
            /* console.log("2 Segudos después");  */
             // Tarea 
             // Importar el
